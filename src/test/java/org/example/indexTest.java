@@ -21,5 +21,6 @@ public class indexTest {
     @Test
     public void title(){
         System.out.println(driver.getTitle());
+        System.out.println("title : "+driver.getTitle());
     }
 }
