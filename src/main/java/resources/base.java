@@ -24,7 +24,7 @@ public class base {
         System.out.println(browserName);
 
         if (browserName.equals("chrome")) {
-            System.setProperty("webdriver.chrome.driver","//Users//tarikbozyak//selenium//chromedriver");
+            System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//chromedriver");
             driver = new ChromeDriver();
             //execute in chrome driver
 
@@ -55,7 +55,7 @@ public class base {
 
     public Properties getStream() throws IOException {
         Properties prop = new Properties();
-        FileInputStream fis = new FileInputStream("/Users/tarikbozyak/Desktop/idea/VavTv/src/main/java/resources/data.properties");
+        FileInputStream fis = new FileInputStream( System.getProperty("user.dir")+"/src/main/java/resources/data.properties");
         prop.load(fis);
         return prop;
 
